@@ -1,16 +1,26 @@
 "use client"
-import React, { useContext, useState } from 'react'
-import Header from './components/Header'
-import { MyContext } from '@/Helper/Context'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const page = () => {
- const user = useContext(MyContext);
-  const [Num, setNum] = useState(10)
-  return (
-    <div>
-      <Header Num={Num}/>
-      {user}
-    </div>
+  const notify = () => {
+    toast("KAMEHAMEHAAAAAAA")
+    toast.success('🦄 Mohib chariya hai', {
+      position: "bottom-left",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+}
+return (
+<div>
+    <button onClick={notify} className='p-4 m-4 bg-yellow-500 rounded'>Finishing Move</button>
+    <ToastContainer />
+</div>
   )
 }
 

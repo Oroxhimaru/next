@@ -1,4 +1,3 @@
-import MyContext from '@/Helper/Context'
 import './globals.css'
 
 
@@ -11,9 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <MyContext>
-        {children}
-        </MyContext>
+        {children} 
         </body>
     </html>
   )
